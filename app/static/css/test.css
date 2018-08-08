@@ -1,0 +1,49 @@
+@font-face {
+	font-family: "Link Font";
+	src: url(Gamefly-Regular.ttf) format("truetype");
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Link Font", sans-serif;
+	color: #7f8f9a;
+	margin: 0;
+	padding: 0;
+	outline: none;  
+	text-decoration: none; /*clear href decoration*/
+
+}
+
+body {
+	height: 100vh;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	height:100vh;
+	max-width: 1000px;
+	margin: 0px auto;
+}
+
+.logo{
+	flex:1;
+	background: blue;
+	
+}
+
+.frame {
+	width: 84%;
+	margin:auto;
+	display:flex;
+}
+
+.navigation {
+	flex:1;
+	background : green;
+}
+
+.footer {
+	flex:1;
+	background : red;
+}

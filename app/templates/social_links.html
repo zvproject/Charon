@@ -1,0 +1,10 @@
+
+	<ul>
+	 	{% for link in links %}
+        <li>
+			<a href="{{link.href}}" title="{{link.name|lower}}">
+				<img src="{{ url_for('static', filename=link.src) }} " alt="{{link.name}}|lower">			
+			</a>				
+		</li>           
+        {% endfor %}
+	</ul>

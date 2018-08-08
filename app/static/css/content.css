@@ -1,0 +1,96 @@
+
+/*---------projects---------*/ /*
+[class*="row_material_"] {
+	margin-bottom:30px;
+}
+
+.row_middle {
+	margin-bottom: 20px;
+}
+
+.row_middle div {
+/*----	margin-left:5%;*/ /*
+}
+
+.row_middle div p {
+	display:inline;
+}
+
+.row_middle div p a {
+	display:unset;
+}
+
+.project_logo a{
+	margin: auto 0;
+}
+
+.project_logo a img {
+	max-width: 100%;
+}
+	
+.project_content{
+	flex:1;
+	margin: 0 15px;
+}
+@media only screen and (min-width:600px) {
+	margin: 0 0;
+}
+
+.name_type{
+	display: inline;
+}
+
+.name_project {
+	display: inline;
+	color:#FFFFFF;
+}
+
+.project_about {
+	margin-left: 15px;
+}
+
+.project_description{
+	font-size: 14px;
+	font-family: serif;
+	margin-bottom: 0px;
+}
+
+.project_desc_continue{
+	margin-top:0;
+}
+
+
+.project_status p{
+	margin: 0 0;
+	display:inline;
+}
+
+.info {
+	float: right;
+}
+
+.status {
+	width: 15px;
+	height:15px;
+	border-radius: 25%;
+	background-color:#ab1f01;
+}
+/*-colors for status box-*/
+/*-development-gray-*/ /*
+.dev {
+	background-color:#939596;
+}
+/*-ongoing-green-*/ /*
+.ongo {
+	background-color:#2b8a07;
+}
+/*-complete-gold-*/ /*
+.comp {
+	background-color:#d6ca83;
+}
+/*-frozen-red-*//*
+.froz{
+	background-color:#ab1f01;
+}
+
+*/
