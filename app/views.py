@@ -3,11 +3,19 @@ from app import app, APP_SOURCE
 from app.functions import get_list_of_footer_social_links
 import os
 
+footer_list = get_list_of_footer_social_links(os.path.join(APP_SOURCE, "footer_links.txt"))
+
+
 @app.route('/')
 @app.route('/index')
 def index():
-	footer_list = get_list_of_footer_social_links(os.path.join(APP_SOURCE, "footer_links.txt"))
-	return render_template("main_menu.html", title="Root", links=footer_list)
+	navigation = ['Projects', 'Portfolio', 'About', 'Contact/Join']
+	return render_template("main_menu.html", title="Home", links=footer_list, menu=navigation)
+
+@app.route('/projects')
+def projects():
+
+	return render_template("project.html", title="Projects")
 
 @app.errorhandler(404)
 def page_not_found(error):

@@ -1,5 +1,5 @@
 {% extends "index.html" %}
-{% block menu %}
+{% block main %}
 	<div>
 		<div class="col-2"></div>
 		<div class="col-8"> 
@@ -12,18 +12,12 @@
 	<div class="row_links">
 		<div class="navigation">
 			<ul >
+				{% for link in menu %}
+				{% set href = link.split('/')[0] %}
 				<li>
-					<a href="projects.html">Projects</a>
+					<a href="{{ url_for('static', filename='templates/'+href+'.html')|lower }}">{{link}}</a>
 				</li>
-				<li>
-					<a href="portfolio.html">Portfolio</a>
-				</li>
-				<li>
-					<a href="About.html">About</a>
-				</li>
-				<li>
-					<a href="contact.html">Contact/Join</a>
-				</li>
+				{% endfor %}
 			</ul>
 		</div>
 	</div>
