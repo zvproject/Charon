@@ -3,7 +3,7 @@
 	<div>
 		<div class="col-2"></div>
 		<div class="col-8"> 
-			<a href="index.html">
+			<a href="index">
 				<img  class="logo" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo">
 			</a>
 		</div>
@@ -15,7 +15,7 @@
 				{% for link in menu %}
 				{% set href = link.split('/')[0] %}
 				<li>
-					<a href="{{ url_for('static', filename='templates/'+href+'.html')|lower }}">{{link}}</a>
+					<a href="{{ href|lower }}">{{link}}</a>
 				</li>
 				{% endfor %}
 			</ul>

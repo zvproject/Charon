@@ -15,7 +15,7 @@ def index():
 @app.route('/projects')
 def projects():
 
-	return render_template("project.html", title="Projects")
+	return render_template("projects.html", title="Projects", links=footer_list)
 
 @app.errorhandler(404)
 def page_not_found(error):
