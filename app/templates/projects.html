@@ -1,27 +1,94 @@
-{% extends "index.html" %}
-{% block main %}
-	<div>
-		<div class="row_upper">
-			<div class="col-1"></div>
-			<div class="col-2">
-				<a href="index.html">
-					<img src="img/Logo.png" class="logo">
-				</a>
-			</div>
-			<div class="col-9">
+{% extends "main_container.html" %}
+{% block project %}
+
+	<!--ALL PROJECTS-->
+	<div class="projects">
+		
+		<!--SINGLE PROJECT DESCRIPTION-->
+		<div class="project_short_block">
+			<a href="#modal_full_project">
+				<div>
+					<p class="project_title">ZeroInfinity</p>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
+				</div>
+				<div>
+					<p class="project_description def_style">
+						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
+					</p>
+				</div>
+			</a>
+		</div>
+
+		<!--MODAL WINDOW FOR FULL DESCRIPTION-->
+		<div id="modal_full_project" class="modal_project">
+			<div>
+				<a href='#close' class='close'>X</a>
+				<div class="">
+					<h2></h2>
+					<div class="logo col-3">
+						<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
+					</div>
+					<div>
+						<p class="project_description def_style">
+							
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row_middle">
-			<div class="col-1"> </div>
-			<div class="col-4">
-				<p><a href="index.html">ZVproject</a></p>
-				<p class="def_style">/</p>
-				<p><a href="projects.html">Projects</a></p>
-			</div>
-			<div class="col-7"></div>
+
+
+		<div class="project_short_block">
+			<a href="">
+				<div>
+					<p>ZeroInfinity</p>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
+				</div>
+				<div>
+					<p>
+						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
+					</p>
+				</div>
+			</a>
 		</div>
-	</div>
-	<div>
+
+		<div class="project_short_block">
+			<div class="project_container">
+			<a href="">
+				<div>
+					<p>ZeroInfinity</p>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
+				</div>
+				<div>
+					<p>
+						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
+					</p>
+				</div>
+			</a>
+			</div>
+		</div>
+
+		<div class="project_short_block">
+			<a href="">
+				<div>
+					<p class="project_title">ZeroInfinity</p>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
+				</div>
+				<div>
+					<p>
+						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
+					</p>
+				</div>
+			</a>
+		</div>
 
 
 	</div>

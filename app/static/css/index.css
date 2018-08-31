@@ -74,6 +74,7 @@ body {
 	background: -moz-linear-gradient(#3a4146 0%,#000000 15%); /*Mozila*/
 	background: linear-gradient(#3a4146 0%,#000000 15%);
 	background-repeat: no-repeat;
+	overflow-y: scroll;
 }
 /*Desktop and wide screen*/
 @media only screen and (min-width:600px) {
@@ -95,8 +96,13 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	padding: 0 10px;
 }
-
+@media only screen and (min-width:1000px) {
+	.page{
+		padding: 0;
+	}
+}
 	/*_________Main Container____*/
 	.main {
 		flex:1;
