@@ -14,8 +14,8 @@ def index():
 
 @app.route('/projects')
 def projects():
-	get_projects(APP_SOURCE)
-	return render_template("projects.html", title="Projects", links=footer_list)
+	projects = get_projects(APP_SOURCE)
+	return render_template("projects.html", title="Projects", links=footer_list, projects=projects)
 
 @app.route('/portfolio')
 def portfolio():

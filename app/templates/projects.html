@@ -4,92 +4,57 @@
 	<!--ALL PROJECTS-->
 	<div class="projects">
 		
+		{% for project in projects %}
 		<!--SINGLE PROJECT DESCRIPTION-->
 		<div class="project_short_block">
-			<a href="#modal_full_project">
+			<a href="#modal_full_project_{{project.Name}}">
 				<div>
-					<p class="project_title">ZeroInfinity</p>
+					<p class="project_title">{{project.Name}}</p>
 				</div>
 				<div>
-					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
+					<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="project_icon">
 				</div>
 				<div>
+					<!--190 characters-->
 					<p class="project_description def_style">
-						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
+						{{project.Description[:190]}}
 					</p>
 				</div>
 			</a>
 		</div>
-
-		<!--MODAL WINDOW FOR FULL DESCRIPTION-->
-		<div id="modal_full_project" class="modal_project">
-			<div>
-				<a href='#close' class='close'>X</a>
-				<div class="">
-					<h2></h2>
-					<div class="logo col-3">
-						<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
-					</div>
-					<div>
-						<p class="project_description def_style">
-							
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="project_short_block">
-			<a href="">
-				<div>
-					<p>ZeroInfinity</p>
-				</div>
-				<div>
-					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
-				</div>
-				<div>
-					<p>
-						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
-					</p>
-				</div>
-			</a>
-		</div>
-
-		<div class="project_short_block">
-			<div class="project_container">
-			<a href="">
-				<div>
-					<p>ZeroInfinity</p>
-				</div>
-				<div>
-					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
-				</div>
-				<div>
-					<p>
-						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
-					</p>
-				</div>
-			</a>
-			</div>
-		</div>
-
-		<div class="project_short_block">
-			<a href="">
-				<div>
-					<p class="project_title">ZeroInfinity</p>
-				</div>
-				<div>
-					<img src="{{ url_for('static', filename='img/projects/space.jpg') }}" class="project_icon">
-				</div>
-				<div>
-					<p>
-						here is atestxtz anscnsa niw nifwan pifnaspn owanpf nkwansfpi nwanf ksancpianw inwan p
-					</p>
-				</div>
-			</a>
-		</div>
-
+		{% endfor %}
 
 	</div>
+
+		{% for project in projects %}
+		<!--MODAL WINDOW FOR FULL DESCRIPTION-->
+		<div id="modal_full_project_{{project.Name}}" class="modal_background">
+			<div class="modal_project">
+				<a href='#close' class='close def_style'>x</a>
+					<p class="project_title">{{project.Type}} - {{project.Name}}</p>
+					<div class="col-5">
+						<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="project_icon">
+						<div class="project_atributes">
+							<div class="project_atributes_line">
+								<p>Status:</p>
+								<p class="dev">{{project.Status}}</p>
+							</div>
+							<div class="project_atributes_line">
+								<p>Website:</p>
+								<a href="">
+									<img src="{{ url_for('static', filename='img/link.png') }}" class="modal_icon"> ZeroInfinity
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-7 project_full_description">
+						<!--500 characters-->
+						<p class="def_style">
+							{{project.Description[:500]}}
+						</p>
+					</div>
+			</div>
+		</div>
+		{% endfor %}
+
 {% endblock %}
