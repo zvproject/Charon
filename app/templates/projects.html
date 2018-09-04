@@ -15,9 +15,9 @@
 					<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="project_icon">
 				</div>
 				<div>
-					<!--190 characters-->
+					<!--90 characters-->
 					<p class="project_description def_style">
-						{{project.Description[:190]}}
+						{{project.Description[:90]}} ...
 					</p>
 				</div>
 			</a>
@@ -42,7 +42,7 @@
 							<div class="project_atributes_line">
 								<p>Website:</p>
 								<a href="">
-									<img src="{{ url_for('static', filename='img/link.png') }}" class="modal_icon"> ZeroInfinity
+									<img src="{{ url_for('static', filename='img/link.png') }}" class="modal_icon"> {{project.Name}}
 								</a>
 							</div>
 						</div>

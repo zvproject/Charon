@@ -45,7 +45,7 @@
 
 	.project_short_block {
 		width: 30%;
-		height: 400px;
+		height: 345px;
 		margin: auto;
 		position: relative;
 		z-index: 10;
@@ -195,7 +195,6 @@
 
 	.project_full_description p {
 		text-indent: 15%;
-		text-align: justify;
 	}
 
 .close {

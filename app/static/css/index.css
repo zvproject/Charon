@@ -6,6 +6,7 @@
 
 .def_style{
 	font-family: "Arial",serif;
+	text-align: justify;
 }
 
 * {
