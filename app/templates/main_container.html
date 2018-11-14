@@ -13,7 +13,10 @@
 			<div class="directory_container">
 				<div class="directory">
 					<a href="index">ZVproject/</a>
-					<a href="projects">Projects</a>
+					{% if title != 'Project'%}
+						<a href="portfolio">Portfolio/</a>
+					{% endif%}
+					<a href="{{title|lower}}">{{title}}</a>
 				</div>
 			</div>
 		</div>
@@ -21,6 +24,9 @@
 	</div>
 
 	{% block project %}
+
+	{% endblock %}
+	{% block team %}
 
 	{% endblock %}
 

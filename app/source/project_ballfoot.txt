@@ -1,0 +1,7 @@
+Name: Balllfoot
+Type: Animation movie
+ImageName: soon.png
+Description: A comic animation movie about why Russian is sucks in football.
+Status: Frozen
+Release: 05/28/2018 
+LastUpdate: 05/28/2018

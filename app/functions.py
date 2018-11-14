@@ -22,6 +22,7 @@ def get_list_of_footer_social_links(path):
 def get_projects(path):
 	project_list = []
 	file_names = glob.glob(os.path.join(path,"project_*"))
+	print(os.path.join(path,"project_*"))
 	for file_name in file_names:
 		with open(file_name, "r") as project_file:
 			project_info = {}
@@ -31,6 +32,17 @@ def get_projects(path):
 					project_info[str(key)] = val.strip()
 				else:
 					project_info[str(key)] += line.strip()
+		project_list.append(project_info)
+	return project_list
+
+def get_art(path):
+	file_names = glob.glob(os.path.join(path,"vz_art.*"))
+	project_list = []
+	for file_name in file_names:
+		(key, name, formats) = file_name.split('.')
+		project_info = {}
+		project_info['Name'] = name.replace('_', ' ')
+		project_info['ImageName'] = 'vz_art.'+name+'.'+formats
 		project_list.append(project_info)
 	return project_list
 

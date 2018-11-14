@@ -2,42 +2,33 @@
 {% block project %}
 
 	<!--ALL PROJECTS-->
-	<div class="projects">
-		
-		{% for project in projects %}
-		<!--SINGLE PROJECT DESCRIPTION-->
-		<div class="project_short_block">
-			<a href="#modal_full_project_{{project.Name}}">
-				<div>
-					<p class="project_title">{{project.Name}}</p>
-				</div>
-				<div>
-					<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="project_icon">
-				</div>
-				<div>
-					<!--90 characters-->
-					<p class="project_description def_style">
-						{{project.Description[:90]}} ...
-					</p>
-				</div>
-			</a>
-		</div>
-		{% endfor %}
+	{% include "list.html" %}
 
-	</div>
 
-		{% for project in projects %}
+	{% if title == "Projects" %}
+		{% for project in list %}
 		<!--MODAL WINDOW FOR FULL DESCRIPTION-->
 		<div id="modal_full_project_{{project.Name}}" class="modal_background">
 			<div class="modal_project">
 				<a href='#close' class='close def_style'>x</a>
 					<p class="project_title">{{project.Type}} - {{project.Name}}</p>
 					<div class="col-5">
-						<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="project_icon">
+						<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="list_icon">
 						<div class="project_atributes">
 							<div class="project_atributes_line">
 								<p>Status:</p>
-								<p class="dev">{{project.Status}}</p>
+								{% if project.Status == 'Completed' %}
+    								{% set css = "com" %}
+								{% elif project.Status == 'Frozen' %}
+									{% set css = "froz" %}
+								{% elif project.Status == 'Ongoing' %}
+									{% set css = "ongo" %}
+								{% elif project.Status == 'In Development' %}
+									{% set css = "dev" %}
+								{% endif %}
+								<p class="{{css}}">
+									{{project.Status}}
+								</p>
 							</div>
 							<div class="project_atributes_line">
 								<p>Website:</p>
@@ -56,5 +47,7 @@
 			</div>
 		</div>
 		{% endfor %}
+	{% endif %}
+
 
 {% endblock %}

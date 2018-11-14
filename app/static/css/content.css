@@ -30,7 +30,7 @@
 /*END_____Logo and Path______*/
 
 /*_____Project Interactive View_____*/
-.projects {
+.list {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -38,12 +38,12 @@
 	margin: 10px 0;
 }
 
-.projects:after {
-	content:"";
-	flex: 1;
+.list_after {
+	content: "";
+	flex: 0.7;
 }
 
-	.project_short_block {
+	.list_short_block {
 		width: 30%;
 		height: 345px;
 		margin: auto;
@@ -56,7 +56,7 @@
 		background-image: linear-gradient( to bottom, transparent 50%, rgb(0, 0, 0) 50%, rgb(30, 30, 30) 100% );
 	}
 
-	.project_short_block a {
+	.list_short_block a {
 		height: 100%;
 		width: 100%;
 		padding: 20px;
@@ -65,13 +65,13 @@
 		z-index: 10;
 	}
 
-	.project_short_block:hover{
+	.list_short_block:hover{
 	    background-position: bottom center;
 	    transform: scale(1.04);
 	}
 
-	.project_short_block:hover:after, 
-	.project_short_block:hover>:last-child:after {
+	.list_short_block:hover:after, 
+	.list_short_block:hover>:last-child:after {
 	    position: absolute;
 	    z-index: 1;
 	    width: 30%; 
@@ -80,27 +80,31 @@
 	    content: ' ';
 	}
 
-	.project_short_block:hover:after {
+	.list_short_block:hover:after {
 	    top: 0px;
 	    right: 0px;
 	    border-width: 3px 3px 0 0;
 	}
 
-	.project_short_block:hover>:last-child:after {
+	.list_short_block:hover>:last-child:after {
 	    bottom: 0px;
 	    left: 0px;
 	    border-width: 0 0 3px 3px
 	}
 
-	.project_title {
+	.list_title {
 		color: #c1c1c1;
 		font-size: 1.2em;
 		text-align: center;
 	}
 
-	.project_short_block .project_title {
+	.list_short_block .list_title {
 		margin-top: 5px;
 		margin-bottom: 19px;
+	}
+	
+	.list_icon {
+		width:100%;
 	}
 /*END_____Project Interactive View_____*/
 
@@ -139,14 +143,8 @@
 		margin-bottom: 5%;
 	}
 
-	.project_icon {
-		width:100%;
-	}
-
 	.project_description {
-		font-family: text_font;
-		font-size: 0.9em;
-		margin: 14px 0;
+		padding: 14px 0;
 		word-wrap: break-word;
 	}
 
@@ -217,6 +215,4 @@
 }
 /*END______Project Modal Window______*/
 
-
 /*END_____Projects_______________*/
-

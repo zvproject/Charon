@@ -1,0 +1,7 @@
+Name: Slobway
+Type: Animation series
+ImageName: slobway.png
+Description: A comic animation series that will show you the daily challenges that people facing in the city when using public transportation. You will take a look from a side to familiar to you and your friend funny but at the same frustration situation. 
+Status: Ongoing
+Release: 05/28/2018 
+LastUpdate: 05/28/2018
