@@ -51,3 +51,4 @@ def get_text(path):
 		for line in file_with_text:
 			text += line
 	return text 
+
