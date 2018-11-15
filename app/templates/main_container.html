@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block main %}
+
+	<!--LOGO AND DIRECTORY-->
+	<div class="row_upper">
+		<div class="col-1"></div>
+		<div class="col-4">
+			<a href="index">
+				<img src="{{ url_for('static', filename='img/Logo.png') }}" class="logo">
+			</a>
+		</div>
+		<div class="row_upper_middle col-6">
+			<div class="directory_container">
+				<div class="directory">
+					<a href="index">ZVproject/</a>
+					{% if title != 'Project'%}
+						<a href="portfolio">Portfolio/</a>
+					{% endif%}
+					<a href="{{title|lower}}">{{title}}</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-1"></div>
+	</div>
+
+	{% block project %}
+
+	{% endblock %}
+	{% block team %}
+
+	{% endblock %}
+
+
+{% endblock %}
+

@@ -1,28 +1,52 @@
-{% extends "index.html" %}
-{% block main %}
-	<div>
-		<div class="row_upper">
-			<div class="col-1"></div>
-			<div class="col-2">
-				<a href="index.html">
-					<img src="img/Logo.png" class="logo">
-				</a>
-			</div>
-			<div class="col-9">
-			</div>
-		</div>
-		<div class="row_middle">
-			<div class="col-1"> </div>
-			<div class="col-4">
-				<p><a href="index.html">ZVproject</a></p>
-				<p class="def_style">/</p>
-				<p><a href="projects.html">Projects</a></p>
-			</div>
-			<div class="col-7"></div>
-		</div>
-	</div>
-	<div>
+{% extends "main_container.html" %}
+{% block project %}
+
+	<!--ALL PROJECTS-->
+	{% include "list.html" %}
 
 
-	</div>
+	{% if title == "Projects" %}
+		{% for project in list %}
+		<!--MODAL WINDOW FOR FULL DESCRIPTION-->
+		<div id="modal_full_project_{{project.Name}}" class="modal_background">
+			<div class="modal_project">
+				<a href='#close' class='close def_style'>x</a>
+					<p class="project_title">{{project.Type}} - {{project.Name}}</p>
+					<div class="col-5">
+						<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="list_icon">
+						<div class="project_atributes">
+							<div class="project_atributes_line">
+								<p>Status:</p>
+								{% if project.Status == 'Completed' %}
+    								{% set css = "com" %}
+								{% elif project.Status == 'Frozen' %}
+									{% set css = "froz" %}
+								{% elif project.Status == 'Ongoing' %}
+									{% set css = "ongo" %}
+								{% elif project.Status == 'In Development' %}
+									{% set css = "dev" %}
+								{% endif %}
+								<p class="{{css}}">
+									{{project.Status}}
+								</p>
+							</div>
+							<div class="project_atributes_line">
+								<p>Website:</p>
+								<a href="">
+									<img src="{{ url_for('static', filename='img/link.png') }}" class="modal_icon"> {{project.Name}}
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-7 project_full_description">
+						<!--500 characters-->
+						<p class="def_style">
+							{{project.Description[:500]}}
+						</p>
+					</div>
+			</div>
+		</div>
+		{% endfor %}
+	{% endif %}
+
 {% endblock %}

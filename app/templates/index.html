@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet" type="text/css">   
+		<link href="{{ url_for('static', filename='css/content.css') }}" rel="stylesheet" type="text/css">   
+
 	</head>
 	<body>
 		<div class="page">
@@ -21,13 +23,16 @@
 				<div class="col-4 right_footer">
 					<div class="footer_menu">
 						<ul>
-							<li><a href="{{url_for('static', filename='template/team.html')}}">Our Team</a></li>
-							<li><a href="{{url_for('static', filename='support.html')}}">Support us</a></li>
+							<li><a href="team">Our Team</a></li>
+							<li><a href="support">Support us</a></li>
+
 						</ul>
 					</div>
 					<div class="footer_legal">
 						<div class="footer_auth">
-							<p>Created and design by <a href="team.html">ZeroVash</a></p>
+
+							<p>Created and design by <a href="team">ZeroVash</a></p>
+
 						</div>
 						<div class="footer_rights">
 							<p>Copyright 2018 ©. All Rights Reserved.</p>
