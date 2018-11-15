@@ -1,0 +1,29 @@
+{% extends "main_container.html" %}
+{% block art %}
+
+		{% for project in projects %}
+		<div class="project_short_block">
+			<a href="#modal_full_project_{{project.Name}}">
+				<div>
+					<p class="project_title">{{project.Name}}</p>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='img/projects/'+project.ImageName) }}" class="project_icon">
+				</div>
+				<div class="project_description">
+					<!--90 characters-->
+					<p class="def_style">
+						{{project.Description|truncate(90, False, '...')}}
+					</p>
+					<p>
+						Read More...
+					</p>
+				</div>
+			</a>
+		</div>
+		{% endfor%}
+		{% if projects|length != 3 %}
+			<div class="project_after"></div>
+		{% endif %}
+
+{% endblock %}

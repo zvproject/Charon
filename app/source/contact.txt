@@ -1,0 +1,32 @@
+If you would like to contact us about any of our projects/ideas or if you have any questions, offers, suggestions or <a href="">support</a> please contact us by filling out the form below or sending an email directly to zerovash@zvproject.com 
+
+We are open to working with people who have a strong passion and desire for knowledge, who are always looking to develop and sharpen his skills. Not only can you enjoy our projects and ideas, but you can also participate in its creation. You can become a part of our team and work on your favorite project, while having fun and improving your skills and knowledge.
+
+	Developing projects and future projects for right now cover the following knowledge/skills :
+					
+			<li>html/css</li>
+			<li>Javascript/jquery</li>
+			<li>php</li>
+			<li>GIMP/photoshop</li>
+			<li>C/c++</li>
+			<li>Blender</li>
+			<li>Music Compositors</li>
+		</ul>
+						<p class="description">Contact me if you are interested. Describe your skills, what you would like to do and on witch project you would like to work for further conversation.
+						</p>
+					</div>
+					<div class="col-1"></div>
+					<form>
+						<div>
+							<input type="text">
+						</div>
+						<div>
+							<input type="text">
+						</div>
+						<div>
+							<textarea>
+								Your message
+							</textarea>
+						</div>
+					</form>
+				</div>
