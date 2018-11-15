@@ -1,9 +1,9 @@
 {% extends "index.html" %}
-{% block menu %}
+{% block main %}
 	<div>
 		<div class="col-2"></div>
 		<div class="col-8"> 
-			<a href="index.html">
+			<a href="index">
 				<img  class="logo" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo">
 			</a>
 		</div>
@@ -12,18 +12,12 @@
 	<div class="row_links">
 		<div class="navigation">
 			<ul >
+				{% for link in menu %}
+				{% set href = link.split('/')[0] %}
 				<li>
-					<a href="projects.html">Projects</a>
+					<a href="{{ href|lower }}">{{link}}</a>
 				</li>
-				<li>
-					<a href="portfolio.html">Portfolio</a>
-				</li>
-				<li>
-					<a href="About.html">About</a>
-				</li>
-				<li>
-					<a href="contact.html">Contact/Join</a>
-				</li>
+				{% endfor %}
 			</ul>
 		</div>
 	</div>
