@@ -1,0 +1,31 @@
+
+	<div class="list">	
+		{% for project in list %}
+		<!--SINGLE PROJECT DESCRIPTION-->
+		<div class="list_short_block">
+			<a href="#modal_full_project_{{project.Name}}">
+				<div>
+					<p class="list_title">{{project.Name}}</p>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='img/'+title|lower+'/'+project.ImageName) }}" class="list_icon">
+				</div>
+				{% if title == "Projects" %}
+				<div class="list_description">
+					<!--90 characters-->
+					<p class="def_style">
+						{{project.Description|truncate(90, False, '...')}}
+					</p>
+					<p>
+						Read More...
+					</p>
+				</div>
+				{% endif %}
+			</a>
+		</div>
+		{% endfor %}
+		{% if projects|length != 3 %}
+			<div class="list_after"></div>
+		{% endif %}
+
+	</div>
